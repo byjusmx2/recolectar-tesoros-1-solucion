@@ -20,14 +20,14 @@ function preload(){
 function setup(){
   
   createCanvas(400,600);
-// Moving background
+//Mover fondo
   
 path=createSprite(200,200);
 path.addImage(pathImg);
 path.velocityY = 4;
 
 
-//creating boy running
+//crear sprite boy corriendo
 boy = createSprite(70,580,20,20);
 boy.addAnimation("SahilRunning",boyImg);
 boy.scale=0.08;
@@ -49,7 +49,7 @@ function draw() {
   edges= createEdgeSprites();
   boy.collide(edges);
   
-  //code to reset the background
+  //código para reiniciar el fondo
   if(path.y > 400 ){
     path.y = height/2;
   }
@@ -92,7 +92,7 @@ function draw() {
   drawSprites();
   textSize(20);
   fill(255);
-  text("Treasure: "+ treasureCollection,10,30);
+  text("Tesoro: "+ treasureCollection,10,30);
   }
 
 }
